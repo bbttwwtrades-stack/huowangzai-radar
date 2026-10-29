@@ -55,6 +55,7 @@ class YouTubeClient:
                     publishedAfter=published_after,
                     maxResults=max_results,
                     relevanceLanguage="zh-Hant",
+                    regionCode="TW",
                 )
                 .execute()
             )
