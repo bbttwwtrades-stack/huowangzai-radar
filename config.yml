@@ -11,41 +11,51 @@
 # 可自由新增主題（key 名稱即為 GitHub Issue 的 label 名稱）
 # 每個主題最多建議 3~5 組關鍵字（過多會消耗更多 API 配額）
 topics:
+  # 作者：門檻放很低，幾乎有新影片就記錄
+  authors:
+    label: authors
+    threshold_fast: {hours: 48, views: 1000}
+    threshold_slow: {days: 7, views: 3000}
+    keywords:
+      - 郝旭烈
+      - 蔡宇哲
+  # 心理專家：醫師、心理師
+  experts:
+    label: experts
+    threshold_fast: {hours: 48, views: 5000}
+    threshold_slow: {days: 7, views: 20000}
+    keywords:
+      - 黃琮寧
+      - 周慕姿
+      - 心理師
+      - 情緒勒索
   books:
     label: books
+    threshold_fast: {hours: 48, views: 5000}
+    threshold_slow: {days: 7, views: 20000}
     keywords:
       - 好書推薦
       - 說書
       - 讀書心得
-      - 書單
+      - 好書分享
   mindset:
     label: mindset
     keywords:
       - 心靈成長
       - 自我成長
+      - 自我覺察
       - 正念
-      - 內在力量
-  psychology:
-    label: psychology
-    keywords:
-      - 心理學
-      - 情緒管理
-      - 焦慮
-      - 人際關係
   life:
     label: life
     keywords:
       - 人生哲學
       - 思維模式
-      - 自律
-      - 斷捨離
-  people:
-    label: people
-    keywords:
-      - 郝旭烈
-      - 蔡宇哲
-      - 黃從寧
-      - 周慕姿
+      - 人生建議
+
+# ── 標題語言過濾 ──────────────────────────────────────────────────────────────
+# true：只保留繁體中文標題（排除日文、簡體與其他語言）
+filter:
+  traditional_chinese_only: true
 
 # ── 搜尋參數 ──────────────────────────────────────────────────────────────────
 search:
