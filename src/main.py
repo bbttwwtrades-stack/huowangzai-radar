@@ -10,7 +10,7 @@ from . import config, tracker
 from .analyzer import analyze_video
 from .issue_manager import IssueManager
 from .transcript import get_transcript
-from .viral_detector import is_viral
+from .viral_detector import is_traditional_chinese, is_viral
 from .youtube_client import QuotaExceededError, YouTubeClient
 
 logging.basicConfig(
@@ -84,8 +84,12 @@ def main() -> None:
             video_id = video["video_id"]
             view_count = video["view_count"]
 
+            # 只保留繁體中文標題（排除日文、簡體與其他語言）
+            if config.FILTER_TRADITIONAL_CHINESE_ONLY and not is_traditional_chinese(video["title"]):
+                continue
+
             growth_rate = tracker.get_growth_rate(video_id, view_count, tracking_data)
-            viral, reason = is_viral(video, growth_rate)
+            viral, reason = is_viral(video, growth_rate, topic_cfg)
 
             # 更新追蹤記錄（無論是否爆款都記錄，以便下次計算成長率）
             tracker.update_record(video_id, view_count, tracking_data)
