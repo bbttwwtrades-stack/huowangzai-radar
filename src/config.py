@@ -55,6 +55,9 @@ THRESHOLD_FAST: dict = _viral.get("threshold_fast", {"hours": 48, "views": 50_00
 THRESHOLD_SLOW: dict = _viral.get("threshold_slow", {"days": 7, "views": 500_000})
 GROWTH_RATE_THRESHOLD: float = _viral.get("growth_rate", 0.5)
 
+# ── 標題語言過濾 ──────────────────────────────────────────────────────────────
+FILTER_TRADITIONAL_CHINESE_ONLY: bool = _cfg.get("filter", {}).get("traditional_chinese_only", True)
+
 # ── 配額保護 ──────────────────────────────────────────────────────────────────
 MAX_UNITS_PER_RUN: int = _cfg.get("quota", {}).get("max_units_per_run", 3_000)
 
