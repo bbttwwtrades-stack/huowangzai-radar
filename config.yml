@@ -11,18 +11,41 @@
 # 可自由新增主題（key 名稱即為 GitHub Issue 的 label 名稱）
 # 每個主題最多建議 3~5 組關鍵字（過多會消耗更多 API 配額）
 topics:
-  tech:
-    label: tech
+  books:
+    label: books
     keywords:
-      - claude ai
-      - agentic coding
-      - AI 影片生成
-  finance:
-    label: finance
+      - 好書推薦
+      - 說書
+      - 讀書心得
+      - 書單
+  mindset:
+    label: mindset
     keywords:
-      - 賺錢
-      - 股票
-      - 財富自由
+      - 心靈成長
+      - 自我成長
+      - 正念
+      - 內在力量
+  psychology:
+    label: psychology
+    keywords:
+      - 心理學
+      - 情緒管理
+      - 焦慮
+      - 人際關係
+  life:
+    label: life
+    keywords:
+      - 人生哲學
+      - 思維模式
+      - 自律
+      - 斷捨離
+  people:
+    label: people
+    keywords:
+      - 郝旭烈
+      - 蔡宇哲
+      - 黃從寧
+      - 周慕姿
 
 # ── 搜尋參數 ──────────────────────────────────────────────────────────────────
 search:
@@ -36,12 +59,12 @@ viral:
   # 門檻條件 1：發布後 hours 小時內，觀看次數超過 views → 判定為爆款
   threshold_fast:
     hours: 48
-    views: 50000
+    views: 20000
 
   # 門檻條件 2：發布後 days 天內，觀看次數超過 views → 判定為爆款
   threshold_slow:
     days: 7
-    views: 500000
+    views: 100000
 
   # 成長條件：上次記錄到現在，觀看數成長率超過此值 → 判定為爆款
   # 1.0 = 100%（觀看數翻倍）；0.5 = 50% 成長
