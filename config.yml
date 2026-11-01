@@ -51,23 +51,6 @@ topics:
       - 人生哲學
       - 思維模式
       - 人生建議
-  # 活網仔：時事熱點（新聞流量大，門檻放高）
-  news:
-    label: news
-    threshold_fast: {hours: 48, views: 50000}
-    threshold_slow: {days: 7, views: 300000}
-    keywords:
-      - 新聞懶人包
-      - 時事評論
-      - 熱門話題
-  # 活網仔：台股與理財
-  finance:
-    label: finance
-    threshold_fast: {hours: 48, views: 20000}
-    threshold_slow: {days: 7, views: 100000}
-    keywords:
-      - 台股
-      - 財富自由
 
 # ── 標題語言過濾 ──────────────────────────────────────────────────────────────
 # true：只保留繁體中文標題（排除日文、簡體與其他語言）
